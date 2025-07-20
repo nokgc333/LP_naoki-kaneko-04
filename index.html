@@ -32,16 +32,18 @@
     <main>
         <div id="modal1" class="modal__box" data-target="modal1">
             <div class="modal__box__wrapper">
-                <div class="modal__box__title"></div>
-                <p><br><br class="sp"></p>
-                <div class="modal__box__inner"></div>
-                <div class="modal__box__text"></div>
-                <div class="modal__box__inner second"></div>
-                <div class="modal__box__text"></div>
-                <p><br><br class="sp"></p>
+                <div class="modal__box__title">サイトから離れる前に！</div>
+                <p>お客様、まだお楽しみいただけていない情報がたくさんあります！<br><br class="sp">Webサイトを離れる前に、以下の特典をお見逃しなく！</p>
+                <div class="modal__box__inner">最新情報とプロモーション</div>
+                <div class="modal__box__text">
+                    「インフィニティエナジー」に関する最新ニュースやお得なプロモーション情報を受け取るためにメールアドレスを登録しましょう。</div>
+                <div class="modal__box__inner second">エナジードリンクの秘密</div>
+                <div class="modal__box__text">
+                    「インフィニティエナジー」の裏側に迫る独占的な情報を入手。</div>
+                <p>今すぐこのページを離れる場合、これらの特典を逃すことになります。<br><br class="sp">ぜひ続けてご覧いただき、エナジーを最大限に引き出しましょう！</p>
                 <div class="modal__link">
-                    <div class="modal__link__btn back"><a data-target="" class="modal__switch"><span></span></a></div>
-                    <div class="modal__link__btn"><a data-target="modal2" class="modal__switch"><span></span></a></div>
+                    <div class="modal__link__btn back"><a data-target="" class="modal__switch"><span>あとで</span></a></div>
+                    <div class="modal__link__btn"><a data-target="modal2" class="modal__switch"><span>続ける</span></a></div>
                 </div>
                 <a class="modal__box__close"><img src="./assets/img/common/modal_close.svg" alt=""></a>
             </div>
@@ -49,22 +51,24 @@
 
         <div id="modal2" class="modal__box">
             <div class="modal__box__wrapper">
-                <div class="modal__box__title"><br class="sp"></div>
-                <p></p>
-                <div class="modal__box__inner"></div>
-                <div class="modal__box__text"></div>
-                <div class="modal__box__inner second"></div>
-                <div class="modal__box__text"></div>
-                <p><br class="pc"></p>
+                <div class="modal__box__title">メールマガジンに<br class="sp">登録しよう！</div>
+                <p>「インフィニティエナジー」の最新情報、特別プロモーション、健康的なライフスタイルのヒントを受け取りたいですか？それなら、ぜひメールマガジンに登録してください。登録は簡単で、以下の特典も含まれます。</p>
+                <div class="modal__box__inner">特別なプロモーション情報</div>
+                <div class="modal__box__text">
+                    新製品、セール、および限定オファーのお知らせを受け取る機会。</div>
+                <div class="modal__box__inner second">健康的な生活スタイルのヒント</div>
+                <div class="modal__box__text">
+                    エネルギー充電のコツ、栄養アドバイス、運動の助言など、お役立ち情報。</div>
+                <p>メールマガジンに登録して、「インフィニティエナジー」との接点を強化し、<br class="pc">エネルギーを最大限に活用しましょう！登録は無料です。</p>
                 <form class="modal__form" method="post" action="#">
                     <table>
                         <tr>
-                            <th></th>
-                            <td><input type="text"></td>
+                            <th>メールアドレス*</th>
+                            <td><input type="text" name="email" class="text-box"></td>
                         </tr>
                     </table>
                     <div class="modal__link">
-                        <button type="submit"><a class="modal__switch"><span></span></a></button>
+                        <button type="submit" class="modal__link__btn"><a class="modal__switch"><span>登録する</span></a></button>
                     </div>
                 </form>
                 <a class="modal__box__close"><img src="./assets/img/common/modal_close.svg" alt=""></a>
@@ -81,7 +85,8 @@
                         <div class="kv__body__title">
                             <img src="./assets/img/common/catch_copy_title.svg" alt="限界を超えろ">
                         </div>
-                        <div class="kv__body__text">「Infinity Energy」は、無限の活力を提供し、限界を超える力を引き出す高エネルギードリンクです。あなたの日常を活性化しましょう！</div>
+                        <div class="kv__body__text">「Infinity Energy」は、無限の活力を提供し、限界を超える力を引き出す高エネルギードリンクです。あなたの日常を活性化しましょう！
+                        </div>
                     </div>
                     <model-viewer id="reveal"
                         loading="eager"
@@ -123,11 +128,19 @@
                                     <div class="concept__contets__right__img">
                                         <img class="concept__contents__right__img__item" src="./assets/img/common/MixedBerry@2x.png" alt="">
                                     </div>
-                                    <div class="concept__contents__right__title"><br class="sp"></div>
-                                    <div class="concept__contents__right__text"></div>
+                                    <div class="concept__contents__right__title">
+                                        ミクストベリー<br class="sp">ディライト
+                                    </div>
+                                    <div class="concept__contents__right__text">
+                                        ブルーベリー、ストロベリー、ブラックベリーのブレンド。甘さと爽やかさが絶妙。
+                                    </div>
                                     <div class="concept__contents__right__bottom">
-                                        <div class="concept__contents__right__bottom__button mixed"></div>
-                                        <div class="concept__contents__right__bottom__button mixed"></div>
+                                        <div class="concept__contents__right__bottom__button mixed">
+                                            集中力を高めたい
+                                        </div>
+                                        <div class="concept__contents__right__bottom__button mixed">
+                                            気持ちをリセットしたい
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -146,11 +159,19 @@
                                     <div class="concept__contents__right__img green">
                                         <img class="concept__contents__right__img__item green" src="./assets/img/common/GreenFusiton@2x.png" alt="">
                                     </div>
-                                    <div class="concept__contents__right__title"></div>
-                                    <div class="concept__contents__right__text"></div>
+                                    <div class="concept__contents__right__title">
+                                        グリーンフュージョンブラスト
+                                    </div>
+                                    <div class="concept__contents__right__text">
+                                        フレッシュなミントと爽やかなライムをブレンド。夏の暑い日に最適。
+                                    </div>
                                     <div class="concept__contents__right__bottom">
-                                        <div class="concept__contents__right__bottom__button green"></div>
-                                        <div class="concept__contents__right__bottom__button green"></div>
+                                        <div class="concept__contents__right__bottom__button green">
+                                            リフレッシュしたい
+                                        </div>
+                                        <div class="concept__contents__right__bottom__button green">
+                                            気分を高めたい
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -167,13 +188,21 @@
                                 </div>
                                 <div class="concept__contents__right" id="product03">
                                     <div class="concept__contents__right__img hot">
-                                        <img class="concept__contents__right__img__item hot" src="./assets/img/common/HotBlaze@2x.png" alt="">
+                                        <img class="concept__contents__right__img__item green" src="./assets/img/common/HotBlaze@2x.png" alt="">
                                     </div>
-                                    <div class="concept__contents__right__title hot"></div>
-                                    <div class="concept__contents__right__text"></div>
+                                    <div class="concept__contents__right__title hot">
+                                        ホットブレイズインフェルノ
+                                    </div>
+                                    <div class="concept__contents__right__text">
+                                        シナモン、チリペッパーをブレンドした、スパイシーな風味。エナジードリンクの新たな次元を開拓。
+                                    </div>
                                     <div class="concept__contents__right__bottom">
-                                        <div class="concept__contents__right__bottom__button hot"></div>
-                                        <div class="concept__contents__right__bottom__button hot"></div>
+                                        <div class="concept__contents__right__bottom__button hot">
+                                            気持ちを高ぶらせたい
+                                        </div>
+                                        <div class="concept__contents__right__bottom__button hot">
+                                            恋人と熱くなりたい
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -186,24 +215,24 @@
         <section class="who">
             <div class="sec__title__img"></div>
             <div class="limited-width">
-                <h2 class="sec__title"></h2>
+                <h2 class="sec__title">今のあなたは？</h2>
                 <div class="who__contents">
                     <div class="who__contents__list">
                         <div class="who__contents__list__box">
-                            <div class="who__contents__list__box__text"></div>
+                            <div class="who__contents__list__box__text">疲れている</div>
                             <label for="change01" class="who__contents__list__box__toggle"><input type="checkbox" id="change01"/></label>
                         </div>
                         <div class="who__contents__list__box">
-                            <div class="who__contents__list__box__text"></div>
-                            <label for="change01" class="who__contents__list__box__toggle"><input type="checkbox" id="change02"/></label>
+                            <div class="who__contents__list__box__text">週末にイベントに参加予定</div>
+                            <label for="change02" class="who__contents__list__box__toggle"><input type="checkbox" id="change02"/></label>
                         </div>
                         <div class="who__contents__list__box">
-                            <div class="who__contents__list__box__text"></div>
-                            <label for="change01" class="who__contents__list__box__toggle"><input type="checkbox" id="change03"/></label>
+                            <div class="who__contents__list__box__text">頑張り時だから眠気を抑えたい</div>
+                            <label for="change03" class="who__contents__list__box__toggle"><input type="checkbox" id="change03"/></label>
                         </div>
                         <div class="who__contents__list__box">
-                            <div class="who__contents__list__box__text"></div>
-                            <label for="change01" class="who__contents__list__box__toggle"><input type="checkbox" id="change04"/></label>
+                            <div class="who__contents__list__box__text">とにかくテンションを上げたい</div>
+                            <label for="change04" class="who__contents__list__box__toggle"><input type="checkbox" id="change04"/></label>
                         </div>
                     </div>
                     <div class="who__contents__area">
@@ -225,7 +254,7 @@
 
         <section class="what">
             <div class="limited-width">
-                <h2 class="sec__title"><br class="sp"></h2>
+                <h2 class="sec__title">インフィニティエナジーを<br class="sp">飲んだらどうなる？</h2>
                 <div class="what__slider">
                     <div class="what__slider__before" id="js-what__slider__before">
                         <picture>
@@ -241,7 +270,9 @@
                     </div>
                     <input type="range" min="0" max="100" value="50" class="what__slider__range" id="js-what__slider__range">
                 </div>
-                <div class="what__slider__text"></div>
+                <div class="what__slider__text">
+                    ※スライダーを動かすと「Before」と「After」が切り替わります
+                </div>
                 <div class="what__contents">
                     <div class="what__contents__wrap">
                         <div class="what__contents__img">
@@ -249,11 +280,11 @@
                             <img class="what__contents__img__parts" src="./assets/img/common/what__Infinity__energy@2x.png" alt="">
                         </div>
                         <div class="what__contents__text">
-                            <p><br class="sp"></p>
-                            <p></p>
-                            <p></p>
-                            <p><br class="sp"></p>
-                            <p></p>
+                            <p>退屈な日常が充実した<br class="sp">日々の連続に</p>
+                            <p>あなたの眠れる才能が覚醒</p>
+                            <p>脳の回転、キレが向上</p>
+                            <p>あらゆるシーンで<br class="sp">高パフォーマンスを持続</p>
+                            <p>限界？知らないなー。</p>
                         </div>
                     </div>
                 </div>
@@ -261,17 +292,27 @@
         </section>
 
         <section class="product" id="product">
-            <h2 class="sec__title"></h2>
+            <h2 class="sec__title">インフィニティエナジー製品</h2>
             <div class="swiper__sp">
                 <div class="product__swiper">
                     <div class="swiper product__slide">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide slide1" data-swiper-parallax-x="90%">
                                 <img src="./assets/img/common/product__img1@2x.png" alt="">
+                            </div>
+                            <div class="swiper-slide slide2" data-swiper-parallax-x="90%">
                                 <img src="./assets/img/common/product__img2@2x.png" alt="">
+                            </div>
+                            <div class="swiper-slide slide3" data-swiper-parallax-x="90%">
                                 <img src="./assets/img/common/product__img3@2x.png" alt="">
+                            </div>
+                            <div class="swiper-slide slide4" data-swiper-parallax-x="90%">
                                 <img src="./assets/img/common/product__img4@2x.png" alt="">
+                            </div>
+                            <div class="swiper-slide slide5" data-swiper-parallax-x="90%">
                                 <img src="./assets/img/common/product__img5@2x.png" alt="">
+                            </div>
+                            <div class="swiper-slide slide6" data-swiper-parallax-x="90%">
                                 <img src="./assets/img/common/product__img6@2x.png" alt="">
                             </div>
                         </div>
@@ -316,50 +357,67 @@
                 <div class="product__wrapper">
                     <div class="product__info">
                         <div class="product__info__head">
-                            <div class="product__info__head__title"><br><br></div>
-                            <div class="product__info__head__title__detail first"><br><span></span></div>
+                            <div class="product__info__head__title">Mixed<br>Berry<br>Delight</div>
+                            <div class="product__info__head__title__detail first">
+                                販売地域：全国<br><span>250ml</span>
+                            </div>
                             <div class="product__info__head__title__img">
                                 <img src="./assets/img/common/MixedBerry@2x.png" alt="">
                             </div>
                         </div>
                         <div class="product__info__body">
-                            <div class="product__info__body__title"></div>
-                            <div class="product__info__body__detail"></div>
+                            <div class="product__info__body__title">
+                                ミクストベリーディライト
+                            </div>
+                            <div class="product__info__body__detail">
+                                このフレーバーは、深紅のブルーベリー、ストロベリー、ブラックベリーのブレンドから成り立っています。ミクストベリーディライトは、甘さと爽やかさが絶妙に組み合わさり、フルーティーな味わいを提供します。これは運動前やアウトドアアクティビティのお供に最適です。
+                            </div>
                         </div>
                         <div class="product__info__footer">
-                            <p></p><p><span></span></p>
+                            <p>250ml×20本セット</p><p><span>¥4,200</span>(税込)</p>
                         </div>
                     </div>
                     <div class="product__info">
                         <div class="product__info__head">
-                            <div class="product__info__head__title green"><br><br></div>
-                            <div class="product__info__head__title__detail"><br><span></span></div>
+                            <div class="product__info__head__title green">Green<br>Fusion<br>Blast</div>
+                            <div class="product__info__head__title__detail">
+                                販売地域：全国<br><span>250ml</span>
+                            </div>
                             <div class="product__info__head__title__img">
                                 <img src="./assets/img/common/GreenFusiton@2x.png" alt="">
                             </div>
                         </div>
                         <div class="product__info__body">
-                            <div class="product__info__body__title"></div>
-                            <div class="product__info__body__detail"></div>
+                            <div class="product__info__body__title">
+                                グリーンフュージョンブラスト
+                            </div>
+                            <div class="product__info__body__detail">
+                                このフレーバーは、フレッシュなミントと爽やかなライムが組み合わさったものです。グリーンフュージョンブラストは、気分をリフレッシュし、エネルギーを高めるのに最適です。緑色の液体が魅力的で、夏の暑い日に最適な選択肢です。
+                            </div>
                         </div>
                         <div class="product__info__footer">
-                            <p></p><p><span></span></p>
+                            <p>250ml×20本セット</p><p><span>¥4,200</span>(税込)</p>
                         </div>
                     </div>
                     <div class="product__info">
                         <div class="product__info__head">
-                            <div class="product__info__head__title hot"><br><br></div>
-                            <div class="product__info__head__title__detail"><br><span></span></div>
+                            <div class="product__info__head__title hot">Hot<br>Blaze<br>Inferno</div>
+                            <div class="product__info__head__title__detail">
+                                販売地域：全国<br><span>250ml</span></div>
                             <div class="product__info__head__title__img">
                                 <img src="./assets/img/common/HotBlaze@2x.png" alt="">
                             </div>
                         </div>
                         <div class="product__info__body hot">
-                            <div class="product__info__body__title"></div>
-                            <div class="product__info__body__detail"></div>
+                            <div class="product__info__body__title">
+                                ホットブレイズインフェルノ
+                            </div>
+                            <div class="product__info__body__detail">
+                                このフレーバーは、シナモン、チリペッパーをブレンドした、スパイシーな風味で、まるで燃え盛る情熱を感じるかのような味わいです。エナジードリンクの新たな次元を開拓し、情熱的なエネルギーを注入します。
+                            </div>
                         </div>
                         <div class="product__info__footer">
-                            <p></p><p><span></span></p>
+                            <p>250ml×20本セット</p><p><span>¥4,200</span>(税込)</p>
                         </div>
                     </div>
                 </div>
@@ -411,14 +469,15 @@
 
         <section class="shop" id="shop">
             <div class="limited-width">
-                <h2 class="sec__title"><br class="sp"></h2>
+                <h2 class="sec__title">インフィニティエナジー<br class="sp">販売店舗</h2>
                 <div class="shop__contents">
                     <div class="swiper shop__contents__slider">
                         <div class="swiper-wrapper shop__slide"></div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                         <div class="shop__contents__slider__detail__button__wrap">
-                            <button type="button" class="shop__contents__slider__detail__button"><img src="./assets/img/common/shop__button.svg" alt=""></button>
+                            <button type="button" class="shop__contents__slider__detail__button"><img src="./assets/img/common/shop__button.svg" alt="">あなたの現在地からの距離を見る
+                            </button>
                         </div>
                     </div>
                     <div class="shop__contents__map">
@@ -428,17 +487,18 @@
                         </div>
                         <svg width="460" height="490" viewBox="0 0 460 490" fill="none" xmlns="http://www.w3.org/2000/svg">
                         </svg>
-                        <div class="shop__contents__map__region hokkaido"></div>
-                        <div class="shop__contents__map__region hokuriku"></div>
-                        <div class="shop__contents__map__region kanto"></div>
-                        <div class="shop__contents__map__region kansai"></div>
-                        <div class="shop__contents__map__region tokai"></div>
-                        <div class="shop__contents__map__region tyugoku"></div>
-                        <div class="shop__contents__map__region sikoku"></div>
-                        <div class="shop__contents__map__region kyusyu"></div>
+                        <div class="shop__contents__map__region hokkaido">北海道・東北</div>
+                        <div class="shop__contents__map__region hokuriku">北陸</div>
+                        <div class="shop__contents__map__region kanto">関東</div>
+                        <div class="shop__contents__map__region kansai">関西</div>
+                        <div class="shop__contents__map__region tokai">東海</div>
+                        <div class="shop__contents__map__region tyugoku">中国</div>
+                        <div class="shop__contents__map__region sikoku">四国</div>
+                        <div class="shop__contents__map__region kyusyu">九州・沖縄</div>
                     </div>
                     <div class="shop__contents__map__google">
-                        <div id="google__map" allowfullscreen="" loading="lazy"></div>
+                        <div id="google__map" allowfullscreen="" loading="lazy">
+                        </div>
                         <div class="shop__contents__map__google__distance"></div>
                     </div>
                 </div>
@@ -447,16 +507,16 @@
 
         <section class="data">
             <div class="limited-width">
-                <h2 class="sec__title"><br class="sp"></h2>
+                <h2 class="sec__title">データから見る<br class="sp">インフィニティエナジー</h2>
                 <div class="data__contents">
                     <div class="data__contents__inner">
                         <div class="data__contents__chart">
-                            <div class="data__contents__title"><br></div>
+                            <div class="data__contents__title">インフィニティエナジーの<br>購買者層</div>
                             <canvas id="myPieChart" height="291" width="291"></canvas>
                         </div>
                         <div class="data__contents__graph">
-                            <div class="data__contents__title"><br></div>
-                            <div class="data__contents__graph__label"></div>
+                            <div class="data__contents__title">インフィニティエナジーの<br>売上</div>
+                            <div class="data__contents__graph__label">百万ドル</div>
                             <canvas id="myChart" height="242" width="295"></canvas>
                         </div>
                     </div>
@@ -466,27 +526,35 @@
 
         <section class="chart">
             <div class="limited-width">
-                <h2 class="sec__title"></h2>
-                <div class="chart__text"><br class="pc"></div>
+                <h2 class="sec__title">あなたに合うフレーバーは？</h2>
+                <div class="chart__text">
+                    インフィニティエナジーでは3種類のフレーバーをご用意♪<br class="pc">今のあなたに合うフレーバーを探っちゃおう！
+                </div>
                 <div class="chart__top">
-                    <div class="chart__top__yes"></div>
-                    <div class="chart__top__no"></div>
+                    <div class="chart__top__yes">YES</div>
+                    <div class="chart__top__no">NO</div>
                 </div>
                 <div class="chart__contents sp">
-                    <div data-aos="fade-up" id="question1" class="chart__contents__question"></div>
+                    <div data-aos="fade-up" id="question1" class="chart__contents__question">
+                        待ちに待った週末！休日はとにかくテンションを上げたい！
+                    </div>
                     <div data-aos="fade-up" id="checkbox1" class="chart__contents__checkbox">
-                        <label class="yes"><input type="radio" name="question1" value="yes"></label>
-                        <label class="no"><input type="radio" name="question1" value="no"></label>
+                        <label class="yes"><input type="radio" name="question1" value="yes">YES</label>
+                        <label class="no"><input type="radio" name="question1" value="no">NO</label>
                     </div>
-                    <div data-aos="fade-up" id="question2" class="chart__contents__question"></div>
+                    <div data-aos="fade-up" id="question2" class="chart__contents__question">
+                        何かのイベントに参加予定
+                    </div>
                     <div data-aos="fade-up" id="checkbox2" class="chart__contents__checkbox">
-                        <label class="yes"><input type="radio" name="question2" value="yes"></label>
-                        <label class="no"><input type="radio" name="question2" value="no"></label>
+                        <label class="yes"><input type="radio" name="question2" value="yes">YES</label>
+                        <label class="no"><input type="radio" name="question2" value="no">NO</label>
                     </div>
-                    <div data-aos="fade-up" id="question3" class="chart__contents__question"></div>
+                    <div data-aos="fade-up" id="question3" class="chart__contents__question">
+                        特に予定はない？
+                    </div>
                     <div data-aos="fade-up" id="checkbox3" class="chart__contents__checkbox">
-                        <label class="yes"><input type="radio" name="question3" value="yes"></label>
-                        <label class="no"><input type="radio" name="question3" value="no"></label>
+                        <label class="yes"><input type="radio" name="question3" value="yes">YES</label>
+                        <label class="no"><input type="radio" name="question3" value="no">NO</label>
                     </div>
                     <div data-aos="fade-up" class="chart__contents__question__answer__wrap">
                         <div id="answer1" class="chart__contents__question__answer show">
@@ -517,16 +585,24 @@
                 </div>
                 <div class="chart__contents pc">
                     <div class="chart__contents__wrap">
-                        <div data-aos="fade-up" class="chart__contents__button"></div>
+                        <div data-aos="fade-up" class="chart__contents__button">
+                            待ちに待った週末！休日はとにかくテンションを上げたい！
+                        </div>
                         <div data-aos="fade-up" class="chart__contents__wrap__inner flex">
-                            <div class="chart__contents__button btn-medium"></div>
-                            <div class="chart__contents__button btn-medium"></div>
+                            <div class="chart__contents__button btn-medium">
+                                何かのイベントに参加予定
+                            </div>
+                            <div class="chart__contents__button btn-medium">
+                                十分な睡眠は取れてる？
+                            </div>
                         </div>
                     </div>
                     <div class="chart__contents__wrap__inner flex">
                         <div data-aos="fade-up" class="chart__contents__wrap__inner__flex">
                             <div class="chart__contents__wrap__inner__box">
-                                <div class="chart__contents__button btn-short"></div>
+                                <div class="chart__contents__button btn-short">
+                                    彼女と一緒？
+                                </div>
                                 <div class="chart__contents__wrap__inner__item flex">
                                     <div class="chart__contents__wrap__inner__item__img">
                                         <img src="./assets/img/common/HotBlaze@2x.png" alt="">
@@ -537,7 +613,9 @@
                                 </div>
                             </div>
                             <div class="chart__contents__wrap__inner__box">
-                                <div class="chart__contents__button btn-short"></div>
+                                <div class="chart__contents__button btn-short">
+                                    特に予定はない？
+                                </div>
                                 <div class="chart__contents__wrap__inner__item flex">
                                     <div class="chart__contents__wrap__inner__item__img">
                                         <img src="./assets/img/common/MixedBerry@2x.png" alt="">
@@ -550,7 +628,9 @@
                         </div>
                         <div data-aos="fade-up" class="chart__contents__wrap__inner__flex">
                             <div class="chart__contents__wrap__inner__box">
-                                <div class="chart__contents__button btn-short"></div>
+                                <div class="chart__contents__button btn-short">
+                                    精神的に疲れてる？
+                                </div>
                                 <div class="chart__contents__wrap__inner__item flex">
                                     <div class="chart__contents__wrap__inner__item__img">
                                         <img src="./assets/img/common/GreenFusiton@2x.png" alt="">
@@ -561,7 +641,9 @@
                                 </div>
                             </div>
                             <div class="chart__contents__wrap__inner__box">
-                                <div class="chart__contents__button btn-short"></div>
+                                <div class="chart__contents__button btn-short">
+                                    休みは取れてる？
+                                </div>
                                 <div class="chart__contents__wrap__inner__item flex">
                                     <div class="chart__contents__wrap__inner__item__img">
                                         <img src="./assets/img/common/HotBlaze@2x.png" alt="">
@@ -577,38 +659,56 @@
                 <div data-aos="fade-up" class="chart__contents__box flex">
                     <div class="chart__contents__box__item">
                         <div class="chart__contents__box__item__head">
-                            <div class="chart__contents__box__item__head__name"><br><br></div>
+                            <div class="chart__contents__box__item__head__name">
+                                Mixed<br>Berry<br>Delight
+                            </div>
                             <div class="chart__contents__box__item__head__img">
                                 <img src="./assets/img/common/MixedBerry@2x.png" alt="">
                             </div>
                         </div>
                         <div class="chart__contents__box__item__body">
-                            <div class="chart__contents__box__item__body__title"></div>
-                            <div class="chart__contents__box__item__body__text"></div>
+                            <div class="chart__contents__box__item__body__title">
+                                ミクストベリーディライト
+                            </div>
+                            <div class="chart__contents__box__item__body__text">
+                                ベリーがブレンドされたフレーバーは、甘さと爽やかさが絶妙に組み合わさり、フルーティーな味わい。気分を落ち着かせ、頭が冴え渡ります。
+                            </div>
                         </div>
                     </div>
                     <div class="chart__contents__box__item">
                         <div class="chart__contents__box__item__head">
-                            <div class="chart__contents__box__item__head__name green"><br><br></div>
+                            <div class="chart__contents__box__item__head__name green">
+                                Green<br>Fusion<br>Blast
+                            </div>
                             <div class="chart__contents__box__item__head__img">
                                 <img src="./assets/img/common/GreenFusiton@2x.png" alt="">
                             </div>
                         </div>
                         <div class="chart__contents__box__item__body">
-                                <div class="chart__contents__box__item__body__title"></div>
-                                <div class="chart__contents__box__item__body__text"></div>
+                            <div class="chart__contents__box__item__body__title">
+                                グリーンフュージョンブラスト
+                            </div>
+                            <div class="chart__contents__box__item__body__text">
+                                フレッシュなミントと爽やかなライムのフレーバーにより、気分をリフレッシュさせ、生命エネルギーを高めるのに最適です。夏の暑い日の熱中症予防にも◎
+                            </div>
                         </div>
                     </div>
                     <div class="chart__contents__box__item">
                         <div class="chart__contents__box__item__head">
-                            <div class="chart__contents__box__item__head__name hot"><br><br></div>
+                            <div class="chart__contents__box__item__head__name hot">
+                                Hot<br>Blaze<br>Inferno
+                            </div>
                             <div class="chart__contents__box__item__head__img">
                                 <img src="./assets/img/common/HotBlaze@2x.png" alt="">
                             </div>
                         </div>
                         <div class="chart__contents__box__item__body">
-                            <div class="chart__contents__box__item__body__title"></div>
-                            <div class="chart__contents__box__item__body__text"></div>
+                            <div class="chart__contents__box__item__body__title">
+                                ホットブレイズインフェルノ
+                            </div>
+                            <div class="chart__contents__box__item__body__text">
+                                シナモン、チリペッパーをブレンドしたフレーバーは、これまでにないスパイシーで燃え盛る情熱を感じる味わい。情熱的なエネルギーをあなたに注入します。
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -617,7 +717,7 @@
 
         <section class="everyone">
             <div class="limited-width">
-                <h2 class="sec__title"><br class="sp"></h2>
+                <h2 class="sec__title">みんなの<br class="sp">インフィニティエナジー</h2>
                 <div class="everyone__wrapper">
                     <div class="everyone__contents flex">
                         <div class="everyone__contents__logo">
@@ -650,64 +750,70 @@
 
         <section class="optimal">
             <div class="limited-width">
-                <h2 class="sec__title"></h2>
+                <h2 class="sec__title">あなたに最適な1日の摂取量</h2>
                 <div class="optimal__box">
                     <form method="post" action="#" class="optimal__box__form">
                         <table>
                             <tr>
-                                <th><label></label></th>
+                                <th><label>あなたの年齢</label></th>
                                 <td><select name="age" id="age"></select></td>
                             </tr>
                             <tr>
-                                <th><label></label></th>
+                                <th><label>あなたの体重</label></th>
                                 <td><select name="weight" id="weight"></select></td>
                             </tr>
                             <tr>
-                                <th><label></label></th>
+                                <th><label>あなたの平均睡眠時間</label></th>
                                 <td><select name="sleeping" id="sleeping"></select></td>
                             </tr>
                         </table>
                         <div class="optimal__box__form__button">
-                            <button class="optimal__box__form__button__inner" type="button"></button>
+                            <button class="optimal__box__form__button__inner" type="button">診断する</button>
                         </div>
                     </form>
-                    <div class="optimal__box__form__text"><br class="sp"><span></span></div>
+                    <div class="optimal__box__form__text">
+                        あなたに最適な1日の摂取量は<br class="sp"><span></span>本です。
+                    </div>
                 </div>
                 <div class="optimal__contents">
-                    <div class="optimal__contents__text"></div>
+                    <div class="optimal__contents__text">
+                        「インフィニティエナジー」はエネルギー補給に役立つドリンクですが、適切な摂取が重要です。以下の注意事項に従って、健康的かつ安全な利用をお願いいたします。
+                    </div>
                     <dl class="optimal__contents__list">
-                        <dt></dt>
-                        <dd></dd>
-                        <dt></dt>
-                        <dd></dd>
-                        <dt></dt>
-                        <dd></dd>
-                        <dt></dt>
-                        <dd></dd>
-                        <dt></dt>
-                        <dd></dd>
-                        <dt></dt>
-                        <dd></dd>
-                        <dt></dt>
-                        <dd></dd>
+                        <dt>1日の摂取量を守ろう</dt>
+                        <dd>「インフィニティエナジー」の推奨される1日の摂取量は1〜3本です。これを超えないようにしましょう。過剰な摂取は健康に悪影響を及ぼす可能性があります。</dd>
+                        <dt>個人の感受性を考慮しよう</dt>
+                        <dd>個人差があります。カフェインやその他の成分に対する感受性が高い場合、少ない量でも効果を感じることがあります。体調や状況に応じて調整しましょう。</dd>
+                        <dt>運動前と後に使う場合</dt>
+                        <dd>エナジードリンクは運動前にエネルギーを補給するのに適していますが、摂取のタイミングを適切にコントロールしましょう。過度な摂取は不快感を引き起こすことがあります。</dd>
+                        <dt>水分補給を忘れずに</dt>
+                        <dd>「インフィニティエナジー」はエネルギーを提供しますが、水分補給を忘れないようにしましょう。特に運動中や暑い日には水をこまめに摂りましょう。</dd>
+                        <dt>年齢制限に従おう</dt>
+                        <dd>未成年者や特定の年齢層には制限がある場合があります。年齢制限を守り、未成年者への提供には慎重に対応しましょう。</dd>
+                        <dt>妊娠中や授乳中の方への注意</dt>
+                        <dd>妊娠中や授乳中の場合、医師の指導に従ってください。特にカフェイン摂取には制限が必要かもしれません。</dd>
+                        <dt>他のカフェイン摂取源との組み合わせ</dt>
+                        <dd>他のカフェイン摂取源(コーヒーや紅茶など)と組み合わせた場合、摂取総量に注意しましょう。</dd>
                     </dl>
-                    <div class="optimal__contents__text"></div>
+                    <div class="optimal__contents__text">
+                        「インフィニティエナジー」はエネルギー補給の一部として活用できますが、適切な摂取を守り、自身の健康に配慮しましょう。不明点や健康上の懸念がある場合は、医師や専門家に相談することをお勧めします。
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="know" id="know">
             <div class="limited-width">
-                <h2 class="sec__title"></h2>
+                <h2 class="sec__title">インフィニティエナジーを知る</h2>
                 <div class="know__modal flex">
                     <div data-aos="fade" class="know__modal__item">
                         <div class="know__modal__item__img">
                             <img src="./assets/img/common/know__img1@2x.png" alt="">
                         </div>
                         <div class="know__modal__item__wrap">
-                            <div class="know__modal__item__detail"></div>
-                            <div class="know__modal__item__title"></div>
-                            <div class="know__modal__item__text"></div>
+                            <div class="know__modal__item__detail">2023/00/00</div>
+                            <div class="know__modal__item__title">エナジードリンクの歴史と未来</div>
+                            <div class="know__modal__item__text">エナジードリンクの進化と未来展望を探ります。</div>
                         </div>
                     </div>
                     <div data-aos="fade" class="know__modal__item">
@@ -715,9 +821,9 @@
                             <img src="./assets/img/common/know__img2@2x.png" alt="">
                         </div>
                         <div class="know__modal__item__wrap">
-                            <div class="know__modal__item__detail"></div>
-                            <div class="know__modal__item__title"></div>
-                            <div class="know__modal__item__text"></div>
+                            <div class="know__modal__item__detail">2023/00/00</div>
+                            <div class="know__modal__item__title">ストレス対策にエナジードリンクは役立つか？</div>
+                            <div class="know__modal__item__text">ストレス対策にエナジードリンクの可能性を考察。</div>
                         </div>
                     </div>
                     <div data-aos="fade" class="know__modal__item">
@@ -725,14 +831,14 @@
                             <img src="./assets/img/common/know__img3@2x.png" alt="">
                         </div>
                         <div class="know__modal__item__wrap">
-                            <div class="know__modal__item__detail"></div>
-                            <div class="know__modal__item__title"></div>
-                            <div class="know__modal__item__text"></div>
+                            <div class="know__modal__item__detail">2023/00/00</div>
+                            <div class="know__modal__item__title">アスリートのためのエナジードリンクの最適な利用法</div>
+                            <div class="know__modal__item__text">競技者向けのエナジードリンクの最適な使い方。</div>
                         </div>
                     </div>
                 </div>
                 <div class="know__modal__button__wrap">
-                    <div class="know__modal__button"></div>
+                    <div class="know__modal__button">VIEW ALL</div>
                 </div>
                 <div class="know__modal__page">
                     <div class="know__modal__layer"></div>
@@ -743,8 +849,8 @@
                             </div>
                             <div class="know__modal__header__menu">
                                 <ul>
-                                    <li><a href="#product"></a></li>
-                                    <li><a href="#shop"></a></li>
+                                    <li><a href="#product">PRODUCT</a></li>
+                                    <li><a href="#shop">SHOP</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -756,11 +862,11 @@
 
         <section class="campaign">
             <div class="limited-width">
-                <h2 class="sec__title"><br class="sp"></h2>
+                <h2 class="sec__title">プレゼントキャンペーン<br class="sp">開催中</h2>
                 <div class="campaign__top">
-                    <br class="pc">
-                    <br class="pc">
-                    <p></p>
+                    エナジーを無限に感じる、インフィニティエナジーが贈る、<br class="pc">
+                    スペシャルなキャンペーンがやってきました！<br class="pc">
+                    <p>このチャンスを逃さず、素晴らしいプレゼントを手に入れましょう！</p>
                 </div>
                 <div class="campaign__contents">
                     <div class="campaign__contents__inner flex">
@@ -768,53 +874,63 @@
                             <img src="./assets/img/common/campaign__infinityenergy@2x.png" alt="">
                         </div>
                         <div class="campaign__contents__box">
-                            <div class="campaign__contents__box__title"></div>
-                            <div class="campaign__contents__box__text"></div>
-                            <div class="campaign__contents__box__title"></div>
+                            <div class="campaign__contents__box__title">
+                                プレゼント内容
+                            </div>
+                            <div class="campaign__contents__box__text">
+                                インフィニティエナジーの無料引換券や特別エディションボトルなどの素敵な賞品が当たるチャンス！数量限定なのでお早めに応募してください。
+                            </div>
+                            <div class="campaign__contents__box__title">
+                                キャンペーン期間
+                            </div>
                             <div class="campaign__contents__box__detail">
-                                <span></span><span></span><br class="sp"><span></span><span></span>
+                                2023年<span>10</span>月<span>1</span>日〜<br class="sp">2024年<span>1</span>月<span>31</span>日まで
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="campaign__form">
-                    <div class="campaign__form__title"></div>
+                    <div class="campaign__form__title">応募フォーム</div>
                     <div class="campaign__form__contents">
                         <form method="post" action="#" id="js-campaign__form">
                             <table>
                                 <tr>
-                                    <th><span></span></th>
+                                    <th>お名前*<span>※フルネーム</span></th>
                                     <td><input type="text" name="name" class="text-box"></td>
                                 </tr>
                                 <tr>
-                                    <th><span></span></th>
+                                    <th>お名前*<span>※ふりがな</span></th>
                                     <td><input type="text" name="name__kana" class="text-box"></td>
                                 </tr>
                                 <tr>
-                                    <th></th>
+                                    <th>メールアドレス*</th>
                                     <td><input type="text" name="email" class="text-box"></td>
                                 </tr>
                                 <tr>
-                                    <th></th>
+                                    <th>電話番号*</th>
                                     <td><input type="text" name="tel" class="text-box number"></td>
                                 </tr>
                                 <tr>
-                                    <th></th>
+                                    <th>郵便番号*</th>
                                     <td><input type="text" name="zip" class="text-box number" id="zip"></td>
                                 </tr>
                                 <tr>
-                                    <th></th>
+                                    <th>住所*</th>
                                     <td><input type="text" name="address" class="text-box" id="address"></td>
                                 </tr>
                             </table>
                             <label class="checkbox__label">
-                                <input type="checkbox" name="privacy_policy[]" value="">
-                                <span class="checkbox__label__text"></span>
+                                <input type="checkbox" name="privacy_policy[]" value="プライバシーボリシーに同意します。">
+                                <span class="checkbox__label__text">プライバシーポリシーに同意します。</span>
                             </label>
-                            <div class="campaign__form__contents__text"></div>
-                            <button class="campaign__form__contents__submit" type="submit"></button>
+                            <div class="campaign__form__contents__text">
+                                [送信]ボタンをクリックして応募を完了します。当選者にはメールでお知らせいたします。
+                            </div>
+                            <button class="campaign__form__contents__submit" type="submit">送信する</button>
                         </form>
-                        <div class="campaign__form__contents__foot"></div>
+                        <div class="campaign__form__contents__foot">
+                            注意：このフォームで提供された情報は、キャンペーンの運営および当選者への連絡にのみ使用されます。プライバシーに関する詳細については、Infinity Energyのプライバシーポリシーをご参照ください。
+                        </div>
                     </div>
                 </div>
             </div>
@@ -827,17 +943,17 @@
             </div>
             <div class="footer">
                 <ul class="footer__inner__box left">
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="https://www.instagram.com/techelite__/" target="_blank"></a>Instagram</li>
+                    <li><a href="https://www.youtube.com/@TechElite_YT" target="_blank"></a>YouTube</li>
                 </ul>
                 <ul class="footer__inner__box right">
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="#know">Column</a></li>
+                    <li><a href="https://stock-sun.com/coaching/engineer/" target="_blank">Contact</a></li>
+                    <li><a href="https://stock-sun.com/techelite/" target="_blank">Company</a></li>
+                    <li><a href="https://stock-sun.com/privacy/" target="_blank">Privacy Policy</a></li>
                 </ul>
             </div>
-            <small></small>
+            <small>&copy;INFINITY ENERGY, All Rights Reserved.</small>
         </div>
     </footer>
 
