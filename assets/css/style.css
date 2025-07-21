@@ -1,5 +1,661 @@
-* {
+/* ーーーーーーーーーーーーーーーーーー
+
+reset.css
+
+ーーーーーーーーーーーーーーーーーー */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    background-color: brown;
+    box-sizing: border-box;
+    min-height: 0vw;
+    min-height: 0;
+}
+
+/* hidden 属性が付いているが until-found でない要素を、強制的に非表示 */
+:where([hidden]:not([hidden='until-found'])) {
+    display: none !important
+}
+
+/* モバイルブラウザでの自動文字サイズ調整を無効 */
+/* 要素（とその子孫）に「ダークモード」と「ライトモード」の両方に対応していることを示す */
+:where(html) {
+    -webkit-text-size-adjust: none;
+    color-scheme: dark light
+}
+
+/* ユーザーの環境が “アニメーションを減らさない” 設定になっている場合、:focus-within 状態の <html> 要素には scroll-behavior: smooth; を適用 */
+@media (prefers-reduced-motion:no-preference) {
+    :where(html:focus-within) {
+        scroll-behavior: smooth;
+    }
+}
+
+/* 行の高さ（line-height）を 1.5 に設定 */
+/* フォントファミリーを system-ui（システムフォント）と sans-serif に設定 */
+/* WebKit系ブラウザ（SafariやChromeなど）で文字を滑らかに描画 */
+:where(body) {
+    line-height: 1.5;
+    font-family: system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 親要素から引き継ぎ */
+:where(input, button, textarea, select) {
+    font: inherit;
+    color: inherit;
+}
+
+:where(textarea) {
+    resize: vertical;
+    resize: block;
+}
+
+/* 要素に対して、マウスカーソルを pointer（指の形）に設定 */
+:where(button, label, select, summary, [role='button'], [role='option']) {
+    cursor: pointer;
+}
+
+/* :disabled が指定された要素に対して、カーソルを not-allowed（禁止マーク）に設定 */
+:where(:disabled) {
+    cursor: not-allowed;
+}
+/* 直接の子要素として :disabled な input を持つ label・直後に :disabled な input を持つ label要素に対して、マウスカーソルを not-allowed（禁止マーク）に設定 */
+:where(label:has(>input:disabled), label:has(+input:disabled)) {
+    cursor: not-allowed;
+}
+
+:where(button) {
+    border-style: solid;
+}
+
+/* a（アンカータグ）要素に対して、テキストの色を親要素から継承し、下線のオフセット（位置のずれ）を .2ex に設定 */
+:where(a) {
+    color: inherit;
+    text-underline-offset: .2ex;
+}
+
+/* ul（順不同リスト）および ol（順序付きリスト）の list-style を無効化（非表示） */
+:where(ul, ol) {
+    list-style: none;
+}
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+    display: block;
+}
+
+/* ブロック方向のサイズ（高さ）は自動、インライン方向の最大サイズ（幅）は100%に設定 */
+:where(img, picture, svg) {
+    block-size: auto;
+    max-inline-size: 100%;
+}
+
+/* テキストが要素の幅を超えるときに自動で単語を折り返すように設定 */
+:where(p, h1, h2, h3, h4, h5, h6) {
+    overflow-wrap: break-word;
+}
+
+/* 行の高さをフォントサイズと固定値の合計に設定 */
+:where(h1, h2, h3) {
+    line-height: calc(1em + 0.5rem);
+}
+
+/* 境界線（border）をすべて消去し、ブロックの上端にのみ 1ピクセルの実線を表示し（border-block-start）、線の色を親要素のテキストカラーに合わせ（color: inherit）、要素自体の高さ（block-size）はゼロにし、はみ出したコンテンツが見えるように設定 */
+:where(hr) {
+    border: none;
+    border-block-start: 1px solid;
+    color: inherit;
+    block-size: 0;
+    overflow: visible;
+}
+
+/* 枠線（アウトライン）を「Highlight」という色で3ピクセルの実線にします。アウトラインの位置を要素の外側に2ピクセルずらします。スクロール時に、その要素の上側（または下側）に ビュー高さの10%分の余白 を確保 */
+:where(:focus-visible) {
+    outline: 3px solid Highlight;
+    outline-offset: 2px;
+    scroll-margin-block: 10vh;
+}
+
+/* フォーカス中やアクティブ状態でない .visually-hidden クラスの要素に対して、視覚的に画面から取り除くためのスタイルを適用 */
+:where(.visually-hidden:not(:focus-within, :active)) {
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* ーーーーーーーーーーーーーーーーーー
+
+style02.css
+
+ーーーーーーーーーーーーーーーーーー */
+/* CSSで独自のフォントを定義 */
+@font-face {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://lp-coaching.techelite.jp/coto21/extra/main/fonts/Noto_sans_JP_400.woff2") format("woff2"), url("https://lp-coaching.techelite.jp/coto21/extra/main/fonts/Noto_sans_JP_400.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("https://lp-coaching.techelite.jp/coto21/extra/main/fonts/Noto_sans_JP_500.woff2") format("woff2"), url("https://lp-coaching.techelite.jp/coto21/extra/main/fonts/Noto_sans_JP_500.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("https://lp-coaching.techelite.jp/coto21/extra/main/fonts/Noto_sans_JP_700.woff2") format("woff2"), url("https://lp-coaching.techelite.jp/coto21/extra/main/fonts/Noto_sans_JP_700.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://lp-coaching.techelite.jp/coto21/extra/main/fonts/orbitron_Regular.woff2") format("woff2"), url("https://lp-coaching.techelite.jp/coto21/extra/main/fonts/orbitron_Regular.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("https://lp-coaching.techelite.jp/coto21/extra/main/fonts/orbitron_700.woff2") format("woff2"), url("https://lp-coaching.techelite.jp/coto21/extra/main/fonts/orbitron_700.woff2") format("woff");
+}
+
+/* ルート要素（:root）に、カスタムプロパティ --background-size を cover として定義 */
+:root {
+    --background-size: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans JP", "sans-serif";
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #000;
+    box-sizing: border-box;
+    /* 横方向（x軸）のスクロールを無効化 */
+    overflow-x: hidden;
+    /* 縦方向（y軸）は常にスクロールバーを表示 */
+    overflow-y: scroll;
+    /* iOS などでスムーズなスクロールができるように -webkit-overflow-scrolling: touch を設定 */
+    -webkit-overflow-scrolling: touch;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    /* フォーカス時のアウトライン（点線など）をなくす */
+    outline: none;
+}
+
+input::-moz-placeholder {
+    color: #CDCDCD;
+}
+
+input::placeholder {
+    color: #CDCDCD;
+}
+
+/* input 要素が -webkit-autofill（自動入力）状態のとき、その背景を白色に上書きする */
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* 縦方向の位置揃えを中央に設定 */
+img {
+    max-width: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    /* SafariなどWebKit系のボタン初期スタイルをリセット * */
+    -webkit-appearance: none;
+    /* Firefoxのボタン初期スタイルをリセット */
+    -moz-appearance: none;
+    /* 見た目のブラウザデフォルトを全体的に無効にする */
+    appearance: none;
+    letter-spacing: 0.1em;
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.limited-width-wide {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .limited-width-wide {
+        max-width: 575px;
+    }
+}
+
+.limited-width {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .limited-width {
+        max-width: 575px;
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .product__title {
+    font-family: "Orbitron";
+    font-weight: 400;
+} */
+
+.sec__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.448125;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+@media (max-width: 768px) {
+    .sec__title {
+        font-size: 22px;
+        line-height: 1.448181818;
+    }
+}
+
+.sp {
+    display: none;
+}
+@media (max-width: 768px) {
+    .sp {
+        display: block;
+    }
+}
+
+.pc {
+    display: block;
+}
+@media (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+}
+
+/* ーーーーーーーーーーーーーーーーーー
+
+.modal__box
+
+ーーーーーーーーーーーーーーーーーー */
+.modal__box {
+    position: fixed;
+    z-index: 7777;
+    display: none;
+    width: 80%;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 16px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    padding: 52px;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .modal__box {
+        /* 画面の高さから50px引いた高さが上限 */
+        max-height: calc(100vh - 50px);
+        /* 縦方向のスクロールを有効にする */
+        overflow-y: auto;
+        padding: 24px;
+    }
+}
+
+.modal__box__wrapper {
+    max-width: 748px;
+    margin: 0 auto;
+}
+
+.modal__box__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+@media (max-width: 575px) {
+    .modal__box__close {
+        top: 20px;
+        right: 15px;
+        width: 15px;
+    }
+}
+
+.modal__box__title {
+    /* clamp() 関数を使って、最小 1.375rem、最大 2rem、そして画面幅に応じて伸縮する中間値が設定 */
+    font-size: clamp(1.375rem, 1.1549rem + 0.939vw, 2rem);
+    font-weight: 700;
+}
+
+.modal__box__inner {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(125.88deg, #128FCD -1.47%, #B3D6E0 50.9%, #DC24B1 100.83%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.125rem, 1.037rem + 0.3756vw, 1.375rem);
+    font-weight: 700;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .modal__box__inner {
+        height: 40px;
+        margin-top: 28px;
+    }
+}
+
+.modal__box__inner.second {
+    margin-top: 32px;
+}
+@media (max-width: 768px) {
+    .modal__box__inner.second {
+        margin: 0;
+    }
+}
+
+.modal__box p {
+    margin: 40px 0;
+}
+@media (max-width: 768px) {
+    .modal__box p {
+        text-align: left;
+        margin: 28px 0;
+        letter-spacing: 0.1em;
+    }
+}
+
+.modal__box__text {
+    font-weight: 700;
+    text-align: left;
+    /* 上に24pxの余白を設定、右・下・左は0 */
+    margin: 24px 0 0 0 ;
+}
+@media (max-width: 768px) {
+    .modal__box__text {
+        margin: 20px 0 28px 0;
+        letter-spacing: -0.01em;
+    }
+}
+
+.modal__link {
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    .modal__link {
+        align-items: center;
+        /* 子要素を縦並び＋順序を逆に */
+        flex-direction: column-reverse;
+    }
+}
+
+.modal__link__btn {
+    width: 18.75rem;
+    min-width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    font-weight: 700;
+    /* 要素をインライン表示にし、内部をフレックスボックスで整列 */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(125.88deg, #128FCD -1.47%, #B3D6E0 50.9%, #DC24B1 100.83%);
+    width: 255px;
+    min-width: 200px;
+    text-shadow: 0px, 1px, 6px, 0px rgba(0, 0, 0, 0.4);
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .modal__link__btn {
+        width: 100%;
+        max-width: 287px;
+    }
+}
+
+.modal__link__btn.back {
+    background: #818181;
+    margin-right: 2.5rem;
+}
+@media (max-width: 768px) {
+    .modal__link__btn.back {
+        margin: 1.25rem 0 0 0;
+    }
+}
+
+.modal__form table {
+    width: 100%;
+    margin: 40px 0;
+    text-align: left;
+}
+@media (max-width: 768px) {
+    .modal__form table {
+        margin: 0;
+    }
+}
+
+.modal__form th {
+    width: 30%;
+    font-weight: 400;
+}
+
+.modal__form td {
+    width: 70%;
+}
+@media (max-width: 768px) {
+    .modal__form td {
+        margin: 16px 0;
+    }
+}
+@media (max-width: 768px) {
+    .modal__form th, .modal__form td {
+        width: 100%;
+        display: block;
+    }
+}
+
+.modal__form .text-box {
+    width: 100%;
+    height: 50px;
+    padding: 8px 10px;
+    background-color: #fff;
+    border: 1px solid #DCDCDC;
+    border-radius: 6px;
+}
+
+.modal__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6666;
+    display: none;
+    width: 100%;
+    height: 120%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ーーーーーーーーーーーーーーーーーー
+
+.kv
+
+ーーーーーーーーーーーーーーーーーー */
+.kv {
+    background: url(../img/bg/kv.png) center center / cover no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: clamp(2.5rem, 0.7394rem + 7.5117vw, 7.5rem);
+    padding-bottom: clamp(3rem, -0.3891rem + 14.4601vw, 12.625rem);
+}
+
+.kv model-viewer#reveal {
+    /* ポスター色を透明に設定 */
+    --poster-color: transparent;
+    transform: rotate(17deg);
+    position: absolute;
+    top: 9.5%;
+    right: 12.5%;
+    width: 25%;
+    height: 84%;
+}
+@media (max-width: 768px) {
+    .kv model-viewer#reveal {
+        /* 通常の文書の流れに従って配置 */
+        position: static;
+        width: 50%;
+        height: 320px;
+        margin-top: 40px;
+    }
+}
+
+.kv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-image: url(../img/bg/kv_mask.png);
+    background-repeat: no-repeat;
+    /* 背景画像を右寄せに配置 */
+    background-position: right;
+    /* 要素の中に収まるように拡大・縮小 */
+    background-size: contain;
+    /* 背景と明るさベースで合成（明るい方が残る） */
+    mix-blend-mode: lighten;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .kv::before {
+        background-image: url(../img/bg/kv_mask_sp.png);
+        /* 背景の位置を 横:中央、縦:23% に配置 */
+        background-position: center 23%;
+    }
+}
+
+.kv__wrapper {
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .kv__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+.kv__body {
+    width: 58.4%;
+    margin-top: 152px;
+}
+@media (max-width: 768px) {
+    .kv__body {
+        width: 100%;
+        margin-top: -18px;
+    }
+}
+
+.kv__body__logo {
+    width: 425px;
+    height: 30px;
+}
+@media (max-width: 768px) {
+    .kv__body__logo {
+        margin: 0 auto;
+    }
+}
+@media (max-width: 575px) {
+    .kv__body__logo {
+        width: 100%;
+    }
+}
+
+.kv__body__title {
+    position: relative;
+    width: 100%;
+    height: 268px;
+}
+@media (max-width: 768px) {
+    .kv__body__title {
+        height: 120px;
+    }
+}
+
+.kv__body__title::before {
+    position: absolute;
+    left: 12.3%;
+    content: "";
+    background: url(../img/common/kv_infinity_symbol@2x.png) center center / contain no-repeat;
+    /* 「乗算（multiply）」と「スクリーン（screen）」を組み合わせた合成(コントラストが強調されて、立体感・インパクトが出るように) */
+    mix-blend-mode: overlay;
+    width: 75.3%;
+    height: 100%;
+}
+
+.kv__body__title img {
+    position: absolute;
+    height: 100%;
+}
+
+.kv__body__text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.44791667;
+    letter-spacing: 0.1em;
+    text-shadow: 0px 0px 8px rgba(2, 0, 102, 0.6);
+    color: #fff;
+    text-align: left;
+    margin-top: 24px;
+    width: 100%;
+}
+@media (max-width: 575px) {
+    .kv__body__text {
+        font-size: 1.125rem;
+        letter-spacing: inherit;
+        margin-top: 16px;
+    }
 }
